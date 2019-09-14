@@ -25,22 +25,15 @@ public class FourPointOne {
     // & 0101 (5)
     // = 0001 (1)
     public void compareANDbitwise(long a, long b) {
-//        long result;
-//        result |=
         printLine(a & b);
     }
 
     // Methods
     public int computeParity() {
-
-        System.out.println(Long.toString(testWord.longValue(), 2));
         short result = 0;
         Long x = getTestWord();
-        String observe = "";
-        String observeTwo = "";
         while (getTestWord() != 0) {
             result ^= (getTestWord() & 1);
-            observeTwo += result;
             x >>= 1;
             setTestWord(x);
         }
